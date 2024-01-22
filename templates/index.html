@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>FastAPI File Server</title>
+    <link href="{{ url_for('static', path='/index.css') }}" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>File Index</h1>
+    {% for item in navigation %}
+    <a href="{{ item.href }}">{{ item.caption }}</a>
+    {% endfor %}
+    <br>
+    <a href="{{ upload.href }}" style="color: red;">{{ upload.cation }}</a>
+  </body>
+</html>
